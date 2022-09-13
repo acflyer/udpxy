@@ -13,7 +13,7 @@ jobs:
     - name: upload
       uses: actions/upload-artifact@v3.1.0
       with:
-        path: /usr/bin/udpxy
+        path: ${{github.workspace}}
  
   release:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
     - name: archive
       uses: TheDoctor0/zip-release@0.6.2
     - name: gitrel
-      uses: ncipollo/release-action@v1.10.0
+      uses: anton-yurchenko/git-release@v4.2.2
 
 
 
