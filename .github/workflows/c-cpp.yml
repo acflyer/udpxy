@@ -1,0 +1,17 @@
+name: C/C++ CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: dir
+      run: cd chipmunk
+    - name: make
+      run: make
+
